@@ -1,0 +1,24 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <div class="jumbotron">
+        <div>
+            <h1>Welcome to CampCrush.</h1>
+            <p>View our hand-picked Campgrounds from all over India.</p>
+            <a href="/campgrounds/new" class="btn btn-warning btn-md"> Add new Campground</a>
+        </div>
+    </div>
+    
+    <div class="row" style="display:flex; flex-wrap:wrap;">
+            <% campgrounds.forEach(function(campground){ %>
+                <div class="col-lg-3 col-md-3 col-sm-6 thumbnail">
+                    <img src="<%= campground["image"] %>" height="300px" width="450px">
+                    <a href="/campgrounds/<%= campground._id %>"> <h4 class="caption text-center"><strong><%= campground["name"]  %></strong></h4> </a> 
+                    <!--<a href="/campgrounds/<%= campground._id %>" class="btn btn-primary btn-sm">SHOW MORE</a>-->
+                </div>
+            <% }); %>
+    </div>
+    
+</div>
+
+<% include ../partials/footer %>
