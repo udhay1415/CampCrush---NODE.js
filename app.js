@@ -11,8 +11,8 @@ var LocalStrategy = require("passport-local");
 
 //MONGOOSE CONGIG
 var mongoose=require("mongoose");
-mongoose.connect("mongodb://localhost/yelp_camp");
-// mongoose.connect("mongodb://udhay1415:raje6629@ds155132.mlab.com:55132/camp_crush"); 
+// mongoose.connect("mongodb://localhost/yelp_camp");
+mongoose.connect("mongodb://udhay1415:raje6629@ds155132.mlab.com:55132/camp_crush"); 
 
 //REQUIRE MODULES
 var flash = require("connect-flash");
