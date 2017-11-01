@@ -36,6 +36,7 @@ router.post("/campgrounds",isLoggedIn, function(req,res){
     Campground.create(newCampground,function(err,campgrounds){
         if(err){
             console.log(err);
+            res.render("back");
         }
         else{
             req.flash("success","Campground successfully created");

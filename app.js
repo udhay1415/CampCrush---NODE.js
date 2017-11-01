@@ -20,6 +20,7 @@ var user = require("./modules/user");
 var Campground = require("./modules/campground");
 var Comment = require("./modules/comment");
 var seedDB = require("./seed");
+
 //METHOD-OVERRIDE CONFIG
 var methodOverride= require("method-override");
 app.use(methodOverride("_method"));
